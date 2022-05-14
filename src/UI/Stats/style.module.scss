@@ -1,0 +1,73 @@
+.wrapper {
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  margin: 15px;
+  border-radius: 15px;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.period {
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #fe6b8b;
+  padding-bottom: 15px;
+}
+
+.data {
+  display: flex;
+  margin: 15px 0;
+}
+
+.info {
+  flex: 1;
+  padding: 0 0 5px 10px;
+  line-height: 20px;
+}
+
+.type {
+  font-weight: bold;
+}
+
+.date {
+  font-size: 14px;
+  color: #555;
+}
+
+.number {
+  padding: 12px 0;
+  font-weight: bold;
+  flex-basis: 50px;
+  text-align: right;
+  color: #555;
+}
+
+.datePickers {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-basis: 40px;
+}
+
+.datePickers > * {
+  flex: 1 !important;
+}
+
+.picker {
+  color: #555 !important;
+}
+
+.stats {
+  flex: calc(100vh - 500px);
+  overflow: scroll;
+}
+
+.nodata {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
