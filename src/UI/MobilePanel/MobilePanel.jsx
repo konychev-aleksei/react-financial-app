@@ -7,12 +7,12 @@ export const MobilePanel = ({ data, getAmount, logOut, currentUser }) => {
 
   return (
     <div className={style.wrapper}>
-      <div className={style.title}>Welcome back,</div>
-      <div className={style.username}>{currentUser}</div>
+      <p className={style.title}>Welcome back,</p>
+      <p className={style.username}>{currentUser}</p>
 
       <div className={style.balance}>
-        <div>Your balance</div>
-        <div className={style.count}>{getAmount(balance)}</div>
+        <p>Your balance</p>
+        <p className={style.count}>{getAmount(balance)}</p>
       </div>
       
       <Button onClick={logOut} className={style.button}>

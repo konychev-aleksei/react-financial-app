@@ -7,7 +7,6 @@ import moment from "moment";
 
 import * as api from "../../api";
 
-
 const ListItem = ({
   getCategory,
   getAmount,
@@ -21,13 +20,13 @@ const ListItem = ({
     <div key={item.id} className={style.data}>
       <Icon type={getCategory(item.category)} />
       <div className={style.info}>
-        <div className={style.type}>{getCategory(item.category)}</div>
-        <div className={style.date}>{formattedDate(item.date)}</div>
+        <p className={style.type}>{getCategory(item.category)}</p>
+        <p className={style.date}>{formattedDate(item.date)}</p>
       </div>
       <IconButton onClick={handleClick}>
         <CloseIcon />
       </IconButton>
-      <div className={style.number}>{getAmount(item.amount)}</div>
+      <p className={style.number}>{getAmount(item.amount)}</p>
     </div>
   );
 };
@@ -52,21 +51,19 @@ export const Stats = ({
 
   return (
     <div className={style.wrapper}>
-      <div className={style.stats}>
-        {data.length ? (
-          data.map((item) => (
-            <ListItem
-              getCategory={getCategory}
-              getAmount={getAmount}
-              formattedDate={formattedDate}
-              item={item}
-              handleRemoveRecord={handleRemoveRecord}
-            />
-          ))
-        ) : (
-          <div className={style.nodata}>No data</div>
-        )}
-      </div>
+      {data.length ? (
+        data.map((item) => (
+          <ListItem
+            getCategory={getCategory}
+            getAmount={getAmount}
+            formattedDate={formattedDate}
+            item={item}
+            handleRemoveRecord={handleRemoveRecord}
+          />
+        ))
+      ) : (
+        <p className={style.nodata}>No data</p>
+      )}
     </div>
   );
 };

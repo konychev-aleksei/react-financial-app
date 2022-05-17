@@ -14,7 +14,7 @@ export const Startup = ({ signIn }) => {
 
   return (
     <div className={style.wrapper}>
-      <div className={style.title}>React Financial App</div>
+      <p className={style.title}>React Financial App</p>
       <form className={style.form}>
         <input
           onChange={handleChange}
